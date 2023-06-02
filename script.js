@@ -3,7 +3,7 @@
 
 function createGrid() {
     let count = 0;
-    while (count < 16) {
+    while (count < 16 * 16) {
         count++;
         const newDiv = document.createElement('div');
 

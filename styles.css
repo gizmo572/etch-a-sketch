@@ -2,12 +2,12 @@
 
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: center ;
     flex-wrap: wrap;
 }
 
 .square {
     border: 1px solid black;
-    height: 24vw;
-    width: 24vw;
+    height: 5.8vw;
+    width: 5.8vw;
 }
