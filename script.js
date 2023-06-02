@@ -1,7 +1,10 @@
 // const container = document.getElementsByClassName('container');
+const container = document.querySelector('.container');
 
 
 function createGrid(num) {
+    container.innerHTML = '';
+
     let percentage = 100 / num;
 
     let count = 0;
@@ -12,20 +15,21 @@ function createGrid(num) {
         newDiv.classList.add('square');
         newDiv.style.flexBasis = percentage + '%';
         newDiv.style.paddingBottom = percentage + '%';
-        document.querySelector('.container').appendChild(newDiv);
+        container.appendChild(newDiv);
 
     }
 }
 
-createGrid(64)
+// createGrid(64)
 
-// document.getElementById('submit').addEventListener('click', () => {
-//     createGrid(document.getElementById('size').value);
-//     console.log(size)
-// })
+const enter = document.getElementById('enter');
+let size;
 
-document.querySelectorAll('.square').forEach((div) => {
-    div.addEventListener('mouseover', () => {
-        div.classList.add('hovered');
-    })
+enter.addEventListener('click', () => {
+    createGrid(document.getElementById('size').value);
+    console.log(size)
+})
+
+container.addEventListener('mouseover', (e) => {
+    e.target.classList.add('hovered');
 })
