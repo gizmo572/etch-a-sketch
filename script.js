@@ -15,3 +15,8 @@ function createGrid() {
 
 createGrid();
 
+document.querySelectorAll('.square').forEach((div) => {
+    div.addEventListener('mouseover', () => {
+        div.classList.add('hovered');
+    })
+})
