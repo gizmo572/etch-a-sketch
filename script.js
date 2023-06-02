@@ -23,11 +23,9 @@ function createGrid(num) {
 // createGrid(64)
 
 const enter = document.getElementById('enter');
-let size;
 
 enter.addEventListener('click', () => {
     createGrid(document.getElementById('size').value);
-    console.log(size)
 })
 
 container.addEventListener('mouseover', (e) => {
