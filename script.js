@@ -25,7 +25,10 @@ function createGrid(num) {
 const enter = document.getElementById('enter');
 
 enter.addEventListener('click', () => {
-    createGrid(document.getElementById('size').value);
+    size = document.getElementById('size').value;
+    if (size <= 100) {
+        createGrid(size);
+    } else alert('Please choose a size of 100 or less!')
 })
 
 container.addEventListener('mouseover', (e) => {
