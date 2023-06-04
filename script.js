@@ -32,5 +32,9 @@ enter.addEventListener('click', () => {
 })
 
 container.addEventListener('mouseover', (e) => {
-    e.target.classList.add('hovered');
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+    e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 })
