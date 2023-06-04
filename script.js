@@ -15,6 +15,8 @@ function createGrid(num) {
         newDiv.classList.add('square');
         newDiv.style.flexBasis = percentage + '%';
         newDiv.style.paddingBottom = percentage + '%';
+        newDiv.style.backgroundColor = 'rgba(0,0,0,0.1)';
+
         container.appendChild(newDiv);
 
     }
@@ -31,10 +33,13 @@ enter.addEventListener('click', () => {
     } else alert('Please choose a size of 100 or less!')
 })
 
-container.addEventListener('mouseover', (e) => {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
 
-    e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+container.addEventListener('mouseover', (e) => {
+    
+    // const r = Math.floor(Math.random() * 256);
+    // const g = Math.floor(Math.random() * 256);
+    // const b = Math.floor(Math.random() * 256);
+    // e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    let opacity = parseFloat(e.target.style.backgroundColor.split(")")[0].split(', ')[3]) + 0.1;
+    e.target.style.backgroundColor = `rgb(0, 0, 0, ${opacity})`;
 })
